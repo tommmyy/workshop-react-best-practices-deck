@@ -1,0 +1,51 @@
+{
+	"name": "sqn-webinar-ramda-talk",
+	"version": "1.0.0",
+	"main": "dist",
+	"private": true,
+	"author": "Tomas Konrady <tomaskonrady@gmail.com>",
+	"contributors": [
+		"Tomas Konrady <tomaskonrady@gmail.com>"
+	],
+	"license": "MIT",
+	"dependencies": {
+		"@code-surfer/themes": "^3.1.0",
+		"@emotion/core": "^10.0.27",
+		"@emotion/styled": "^10.0.27",
+		"chroma-js": "^1.4.1",
+		"code-surfer": "^3.1.0",
+		"mdx-deck": "^4.1.0",
+		"prop-types": "^15.7.2",
+		"ramda": "^0.27.0",
+		"ramda-extension": "^0.10.3",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-syntax-highlighter": "^12.2.1",
+		"styled-system": "^5.1.5",
+		"theme-ui": "*"
+	},
+	"resolutions": {
+		"**/react": "16.13.1",
+		"**/react-dom": "16.13.1"
+	},
+	"scripts": {
+		"start": "yarn start:01",
+		"start:01": "yarn slides src/01-introduction.mdx",
+		"build": "yarn build:01 && yarn build:02 && yarn build:03 && yarn build:04",
+		"build:01": "mdx-deck -d ./dist/01-introduction build src/01-introduction.mdx",
+		"slides": "mdx-deck --port=3333",
+		"pdf-slides": "website-pdf http://localhost:3333/print -o"
+	},
+	"devDependencies": {
+		"babel-eslint": "^10.0.3",
+		"eslint": "^6.8.0",
+		"eslint-config-react-union": "^0.15.2",
+		"eslint-plugin-babel": "^5.3.0",
+		"eslint-plugin-import": "^2.20.1",
+		"eslint-plugin-react": "^7.18.3",
+		"gatsby-source-filesystem": "^2.1.48",
+		"prettier": "1.18.2",
+		"raw-loader": "^4.0.0",
+		"website-pdf": "^4.1.0"
+	}
+}

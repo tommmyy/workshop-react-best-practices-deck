@@ -1,0 +1,172 @@
+import { CodeSurfer } from 'code-surfer';
+import { Head, Appear, Notes, Image } from 'mdx-deck';
+import { Listed, Broke, Fronted, BackgroundImaged } from './layouts';
+import { codeSurferTitle, Ul, Li, MetaList } from './components';
+import jam from './images/jam.jpg';
+
+import { theme as lundegaard } from './themes/lundegaard';
+
+export const theme = lundegaard;
+
+<Head>
+	<title>i. Introduction</title>
+</Head>
+
+<Fronted>
+
+# i. Introduction
+
+## React and Liferay
+
+- Tomáš Konrády &amp; Václav Jančařík
+- <a href="https://twitter.com/konnnyy">@konnnyy</a> / <a href="https://github.com/wafflepie">@wafflepie</a>
+
+Lundegaard 2020
+
+<br />
+
+</Fronted>
+
+---
+
+<Listed>
+
+## Agenda
+
+- A
+- B
+- C
+
+<Notes>
+
+- Your notes
+
+</Notes>
+
+</Listed>
+
+---
+
+# 💻 Demo #01-01
+
+### Name of the demo
+
+Additional description.
+
+---
+
+# 🖊️  Exercise #01-01
+
+### [Name of exercise with link](https://example.com)
+
+Additional description.
+
+---
+
+## Summary
+
+---
+
+<Listed>
+
+## List
+
+- Point 1
+- Point 2
+- Point 3
+
+</Listed>
+
+---
+
+<Listed dense>
+
+## Dense list
+
+- Point 1
+- Point 2
+- Point 3
+- Point 4
+- Point 5
+- Point 6
+
+</Listed>
+
+---
+
+<Broke>
+
+# Breaking slide
+
+</Broke>
+
+---
+
+<Broke color="green">
+
+# Breaking slide
+
+</Broke>
+
+---
+
+<Broke color="blue">
+
+# Breaking slide
+
+</Broke>
+
+---
+
+<Broke color="white">
+
+# Breaking slide
+
+</Broke>
+
+---
+
+<BackgroundImaged src={jam}>
+
+# Image breaker
+
+</BackgroundImaged>
+
+---
+
+## Charts
+
+```
+.-----.       .---------.       .---------.
+|     |       |         |       |         |
+| APP | <~~~> | CMS API | <~~~> | CMS APP |
+|     |       |         |       |         |
+'-----'       '---------'       '---------'
+```
+
+---
+
+<CodeSurfer>
+
+```jsx 1 title="Code block with highliting"
+import { Union } from 'react-union';
+
+<Union routes={routes} />;
+```
+
+```jsx 3 title="Code block with highliting"
+import { Union } from 'react-union';
+
+<Union routes={routes} />;
+```
+
+</CodeSurfer>
+
+---
+
+## Code block
+
+```js
+console.log(`Hello world`);
+```
+
