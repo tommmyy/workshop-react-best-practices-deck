@@ -1,0 +1,350 @@
+import { CodeSurfer } from 'code-surfer';
+import { Head, Appear, Notes, Image } from 'mdx-deck';
+import { Box } from 'theme-ui';
+import { Listed, Broke, Fronted, BackgroundImaged } from './layouts';
+import { codeSurferTitle, Ul, Li, MetaList, GH } from './components';
+
+import { theme as sqn } from './themes/sqn';
+
+export const theme = sqn;
+
+<Head>
+	<title>React - best practices</title>
+</Head>
+
+<Fronted>
+
+# React - best practices
+
+## Úvod
+
+- Tomáš Konrády
+- <a href="https://twitter.com/konnnyy">@konnnyy</a>
+- <a href="https://konrady.cz">konrady.cz</a>
+
+Pro <Box sx={{ display: "inline", color: 'primary' }}><a href="https://www.sqn.cz/cs/">SQN.cz</a></Box> 2020
+
+<br />
+
+</Fronted>
+
+---
+
+<Listed>
+
+## O mě
+
+- [Lundegaard](https://zoe.lundegaard.ai)
+- [SQN](https://sqn.cz)
+- [Github <GH />](https://github.com/tommmyy)
+- [Ramda-extension](https://github.com/tommmyy/ramda-extension)
+
+</Listed>
+
+<Notes>
+
+- Doing JS professionaly about 8 years - era of jQuery and Backbone.
+- Main focus is on FE development in React
+- I love Ramda and Opensource -> Ramda-extension
+- At Lundegaard over 3 and half years
+- First issue - integrate React into Liferay 6
+
+</Notes>
+
+---
+
+<Listed dense>
+
+## Agenda
+
+- Styling
+- Patterns and React-hook
+- Data fetching
+- State management
+- Performance
+
+</Listed>
+
+<Notes>
+
+- Tooling?
+
+</Notes>
+
+---
+
+<Broke>
+
+# Prostředí
+
+</Broke>
+
+---
+
+```
+~ node -v
+v12.12.0
+
+~ yarn -v
+1.19.1
+```
+
+---
+
+## Repo
+
+[https://github.com/tommmyy/workshop-react-best-practices](https://github.com/tommmyy/workshop-react-best-practices)
+
+<Notes>
+
+- Show README
+- Project Structure
+
+</Notes>
+
+---
+
+<Broke>
+
+# Basic Component Patterns
+
+</Broke>
+
+---
+
+<Listed>
+
+## Code style
+
+- Defaulting props
+- Arrow vs. Function
+- prop-types
+- Class vs Function
+
+</Listed>
+
+---
+
+<Broke>
+
+# Styling s Theme-UI
+
+</Broke>
+
+---
+
+## CSS-in-JS
+
+```js
+<div style={{ padding: '8px' }}>
+	<span style={{ fontSize: '1.7em' }}>text</span>
+</div>
+```
+
+---
+
+<Listed>
+
+## Features
+
+- Zapouzdření/komponentárnost
+- "Naming things is hard"
+- Jeden jazyk
+
+</Listed>
+
+---
+
+<Listed>
+
+## _Styled_ aneb Dnešní standard
+
+- [princip](https://github.com/styled-components/styled-components#example)
+- implementace: [emotion](https://emotion.sh/docs/introduction) / [styled-components](https://styled-components.com/)
+
+</Listed>
+
+---
+
+<Listed>
+
+## _Design-constraint_ systems
+
+- [styled-system](https://styled-system.com/) / [system-ui](https://system-ui.com/)
+- [Rebass](https://rebassjs.org/)
+
+</Listed>
+
+---
+
+<Broke>
+
+# Theme-ui
+
+</Broke>
+
+---
+
+<Listed>
+
+## Theme-ui
+
+- [Následník Rebass](https://github.com/rebassjs/rebass/issues/720#issuecomment-556064422)
+- Jednoduše témovatelná
+- Spousta primitivních komponent
+- [theme-ui](https://theme-ui.com/)
+- Podpora pro mdx
+
+</Listed>
+
+---
+
+# 💻 Demo
+
+### `theme-ui`
+
+---
+
+# 🖊️ Exercise
+
+### [theme-ui](https://github.com/tommmyy/workshop-react-best-practices/tree/master/exercises/exercise-theme-ui)
+
+---
+
+<Listed>
+
+## Sources
+
+- [Two steps forward, one step back](https://jxnblk.com/blog/two-steps-forward/)
+- [React-Native?](https://github.com/system-ui/theme-ui/issues/170)
+
+</Listed>
+
+---
+
+<Broke>
+
+# Advanced Component Patterns
+
+</Broke>
+
+---
+
+---
+
+<Broke>
+
+# HoCs
+
+</Broke>
+
+---
+
+<Listed>
+
+## Demos & Cvičení
+
+- withProps
+- withFallback
+- withSuspense
+- withConnectedForm?
+
+</Listed>
+
+---
+
+<Broke>
+
+# Render Props
+
+</Broke>
+
+---
+
+<Broke>
+
+# Hooks
+
+</Broke>
+
+---
+
+- Refs
+  - DOM, mergeRef, forwardRef
+  - No-DOM - useInterval, useWebsocket
+- ImeperativeHandle
+- LayoutEffect
+
+---
+
+# Compound component pattern
+
+---
+
+# State management
+
+- Context API - dispatch
+- Modular redux?
+
+---
+
+<Broke>
+
+# Tooling
+
+</Broke>
+
+---
+
+<Listed>
+
+# Možná znáte
+
+- Prettier
+- Eslint
+
+</Listed>
+
+---
+
+<Listed>
+
+# Možná neznáte
+
+- Storybook
+- Husky
+- Lintstaged
+- Plop
+
+</Listed>
+
+<Notes>- fast-ai-gatsby-theme</Notes>
+
+---
+
+<Listed>
+
+## DevStack
+
+- create-react-app(https://github.com/facebook/create-react-app)
+- neutrino(https://parceljs.org/getting_started.html)
+- Next.js
+- Gatsby
+- Vlastní řešení:
+
+</Listed>
+
+<Notes>- react-union-scripts</Notes>
+
+---
+
+<Listed dense>
+
+## Vlastní řešení?
+
+- Je třeba znalost spoustu technologíí:
+- babel/weppack/parcel/rollup/eslint/testing-libs...
+- [Starters](https://www.javascriptstuff.com/react-starter-projects/)
+- [react-starter-kit](https://github.com/kriasoft/react-starter-kit)
+
+</Listed>

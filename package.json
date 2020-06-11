@@ -29,10 +29,8 @@
 		"**/react-dom": "16.13.1"
 	},
 	"scripts": {
-		"start": "yarn start:01",
-		"start:01": "yarn slides src/01-introduction.mdx",
-		"build": "yarn build:01 && yarn build:02 && yarn build:03 && yarn build:04",
-		"build:01": "mdx-deck -d ./dist/01-introduction build src/01-introduction.mdx",
+		"start": "yarn slides src/deck.mdx",
+		"build": "mdx-deck -d ./dist/01-introduction build src/deck.mdx",
 		"slides": "mdx-deck --port=3333",
 		"pdf-slides": "website-pdf http://localhost:3333/print -o"
 	},
@@ -44,7 +42,7 @@
 		"eslint-plugin-import": "^2.20.1",
 		"eslint-plugin-react": "^7.18.3",
 		"gatsby-source-filesystem": "^2.1.48",
-		"prettier": "1.18.2",
+		"prettier": "2.0.5",
 		"raw-loader": "^4.0.0",
 		"website-pdf": "^4.1.0"
 	}

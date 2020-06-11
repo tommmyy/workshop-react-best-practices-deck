@@ -1,4 +1,4 @@
 src/snippets/*
 code-surfer.js
-src/*.mdx
+*.mdx
 

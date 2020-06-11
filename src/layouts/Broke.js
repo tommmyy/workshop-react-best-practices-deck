@@ -4,13 +4,13 @@ import styled from '@emotion/styled';
 import { Wrapper } from './Fronted';
 
 const BrokeBase = styled(Wrapper)`
-		color: ${ps => (ps.color === 'white' ? ps.theme.darkGray : null)};
+		color: ${(ps) => (ps.color === 'white' ? ps.theme.darkGray : null)};
 
 		h1 {
-			color: ${ps => (ps.color === 'white' ? ps.theme.colors.primary : null)};
+			color: ${(ps) => (ps.color === 'white' ? ps.theme.colors.primary : null)};
 
 			a {
-					border-bottom-color: ${ps => (ps.color === 'white' ? ps.theme.colors.primary : null)};
+					border-bottom-color: ${(ps) => (ps.color === 'white' ? ps.theme.colors.primary : null)};
 			}
 		}
 	},
@@ -18,12 +18,11 @@ const BrokeBase = styled(Wrapper)`
 
 const Broke = ({ children, ...rest }) => {
 	const [title] = React.Children.toArray(children);
-
 	return <BrokeBase {...rest}>{title}</BrokeBase>;
 };
 
 Broke.defaultProps = {
-	color: 'white',
+	color: 'red',
 };
 
 Broke.propTypes = {

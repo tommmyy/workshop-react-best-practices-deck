@@ -2,13 +2,20 @@ root = true
 
 [*]
 charset = utf-8
-indent_size = 2
-
-[*.{js,css,mdx}]
 indent_style = tab
+indent_size = 2
 end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{md,snippet,json}]
+[package.json]
 indent_style = space
+indent_size = 2
+
+[*.{mdx,yml,yaml}]
+indent_style = space
+indent_size = 2
+
+[*.scss]
+indent_size = 2
+insert_final_newline = false
