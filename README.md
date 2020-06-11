@@ -10,8 +10,8 @@
 # Getting started
 
 ```shell
-git clone https://github.com/tommmyy/sqn-webinar-ramda-talk
-cd mdx-deck-template 
+git clone https://github.com/tommmyy/workshop-react-best-practices-deck
+cd workshop-react-best-practices-deck
 yarn install
 ```
 
@@ -21,7 +21,7 @@ yarn install
 yarn start
 ```
 
-## Building 
+## Building
 
 ```shell
 yarn build
