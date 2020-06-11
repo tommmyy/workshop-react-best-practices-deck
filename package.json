@@ -30,7 +30,7 @@
 	},
 	"scripts": {
 		"start": "yarn slides src/deck.mdx",
-		"build": "mdx-deck -d ./dist/01-introduction build src/deck.mdx",
+		"build": "mdx-deck -d ./dist/deck build src/deck.mdx",
 		"slides": "mdx-deck --port=3333",
 		"pdf-slides": "website-pdf http://localhost:3333/print -o"
 	},
