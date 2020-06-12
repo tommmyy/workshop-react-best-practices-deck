@@ -58,10 +58,11 @@ Pro <Box sx={{ display: "inline", color: 'primary' }}><a href="https://www.sqn.c
 ## Agenda
 
 - Styling
-- Patterns and React-hook
-- Data fetching
+- HoC
+- Render prop
+- Hooks
 - State management
-- Performance
+- Tooling
 
 </Listed>
 
@@ -253,24 +254,40 @@ v12.12.0
 
 ---
 
+- HoC
+- RenderProps
+- Hooks
+
 ---
 
 <Broke>
 
-# HoCs
+# High-order Components
 
 </Broke>
 
----
-
-<Listed>
+<Notes>
 
 ## Demos & Cvičení
 
 - withProps
 - withFallback
 - withSuspense
+
 - withConnectedForm?
+
+</Notes>
+
+---
+
+<Listed dense>
+
+## HoC
+
+- pro abstrakci společné funkcionality komponent
+- jeden z prvních rozšířených patternů
+- pohřbeno odstavení `recompose` knihovny...
+- ... ale stále relevantí pro některé problémy!
 
 </Listed>
 
@@ -290,7 +307,7 @@ v12.12.0
 
 </Broke>
 
----
+<Notes>
 
 - Refs
   - DOM, mergeRef, forwardRef
@@ -298,16 +315,58 @@ v12.12.0
 - ImeperativeHandle
 - LayoutEffect
 
----
-
-# Compound component pattern
+</Notes>
 
 ---
+
+<Listed>
+
+## Pravidla práce s hooky
+
+- Volej hooky jen z top levelu komponenty
+- Hooky volej jen z React komponent
+
+</Listed>
+
+---
+
+# 💻 Demo
+
+### `hooks/StateDemo`
+
+---
+
+# 💻 Demo
+
+### `hooks/useInterval`
+
+---
+
+# 🖊️ Exercise
+
+### [useWebsocket](https://github.com/tommmyy/workshop-react-best-practices/tree/master/exercises/exercise-hooks)
+---
+
+<Broke color="red">
 
 # State management
 
-- Context API - dispatch
-- Modular redux?
+</Broke>
+
+---
+
+# 💻 Demo
+
+### `state`
+
+---
+
+# 🖊️ Exercise
+
+### [state](https://github.com/tommmyy/workshop-react-best-practices/tree/master/exercises/exercise-state)
+---
+
+# Compound component pattern
 
 ---
 
@@ -371,3 +430,25 @@ v12.12.0
 - [react-starter-kit](https://github.com/kriasoft/react-starter-kit)
 
 </Listed>
+
+---
+
+<Broke color="red">
+
+# Závěr
+
+</Broke>
+
+---
+
+<Listed>
+
+## Další témata
+
+- Perfomance
+- Formuláře
+- Aplikační stav
+- Testing
+
+</Listed>
+
