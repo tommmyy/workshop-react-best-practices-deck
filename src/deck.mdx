@@ -375,12 +375,22 @@ button, input[type="button"], input[type="submit"]  {
 ## Theme-ui
 
 - [Následník Rebass](https://github.com/rebassjs/rebass/issues/720#issuecomment-556064422)
-- Jednoduše témovatelná
+- Jednoduše témovatelné
 - Spousta primitivních komponent
-- [theme-ui](https://theme-ui.com/)
-- Podpora pro mdx
+- Podpora pro [mdx](https://mdxjs.com/)
+- [theme-ui](https://theme-ui.com/home)
 
 </Listed>
+
+<Notes>
+
+- více komponent než Rebass
+- témovatelné - system-ui spec + extension na mdx a jsx
+- vysvětlit mdx
+- vysvětlit @jsx pragmu
+- theme-ui
+
+</Notes>
 
 ---
 
@@ -388,21 +398,60 @@ button, input[type="button"], input[type="submit"]  {
 
 ### `theme-ui`
 
+<Notes>
+
+- ukázat některé features theme-ui dle notes v DemoThemeUi
+
+</Notes>
+
 ---
 
 # 🖊️ Exercise
 
 ### [theme-ui](https://github.com/tommmyy/workshop-react-best-practices/tree/master/exercises/exercise-theme-ui)
 
+<Notes>
+
+- Grid Framework
+- upozornit na `flexWrap` u Row
+- POZOR: neukazovat ještě solution-theme-ui/ExerciseWorkshopUI
+
+</Notes>
+
 ---
 
 # Pattern - Wrapping 3rd-party libs
+
+
+---
+
+<Listed dense>
+
+## Výhody
+
+- Patches, bugfixes, customer specific needs na jednom místě
+- Umožňuje (vý/z)měnu implementace
+- Umožní definovat vlastní API
+
+</Listed>
 
 ---
 
 # 💻 Demo
 
 ### `solution-theme-ui/ExerciseWorkshopUI`
+
+---
+
+# 💻 Demo
+
+### `solution-theme-ui/ExerciseSwitcherSolution`
+
+<Notes>
+
+- Pouze Ukázat
+
+</Notes>
 
 ---
 
@@ -456,9 +505,10 @@ button, input[type="button"], input[type="submit"]  {
 
 ## HoC
 
-- pro abstrakci společné funkcionality komponent
-- jeden z prvních rozšířených patternů
-- pohřbeno odstavení `recompose` knihovny...
+- Umožňuje abstrakci společné funkcionality komponent
+- Uutilities components
+- Jeden z prvních rozšířených patternů
+- Pohřbeno odstavením [`recompose`](https://github.com/acdlite/recompose/blob/master/docs/API.md) knihovny...
 - ... ale stále relevantí pro některé problémy!
 
 </Listed>
