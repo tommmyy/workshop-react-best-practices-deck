@@ -47,6 +47,9 @@ Pro <Box sx={{ display: "inline", color: 'primary' }}><a href="https://www.sqn.c
 - Main focus is on FE development in React
 - I love Ramda and Opensource -> Ramda-extension
 - At Lundegaard over 3 and half years
+- React Apps - banks, insurance, půjčkovní systémy
+- Speaker - WebExpo, Czeck Lrf conference, React-Finland
+- Browser analysis and AI prediction
 - First issue - integrate React into Liferay 6
 
 </Notes>
@@ -100,7 +103,8 @@ v12.12.0
 <Notes>
 
 - Show README
-- Project Structure
+- Project Structure - Gatsby, packages,
+- workshop - templates/Exercise, App
 
 </Notes>
 
@@ -132,11 +136,28 @@ v12.12.0
 
 ### `Basic Patterns`
 
+```
+src/Demo
+```
+
+<Notes>
+
+- InlineText pomocí `<ui-components/Text>`
+- Vystvětlit forwardRef
+
+</Notes>
+
 ---
 
 # 🖊️ Exercise
 
 ### [Basic patterns](https://github.com/tommmyy/workshop-react-best-practices/tree/master/exercises/exercise-basic-patterns)
+
+<Notes>
+
+- Refactor class component do našeho codestyle
+
+</Notes>
 
 ---
 
@@ -156,17 +177,157 @@ v12.12.0
 </div>
 ```
 
+<Notes>
+
+- Náš první důležitý pattern
+- React / JSX ideální pro tento pattern
+- nejjednodušší implementace
+
+</Notes>
+
+---
+
+# Nevýhody CSS
+
+---
+
+## Jeden namespace/scope
+
+```
+.item {
+  // ...
+}
+```
+
+---
+
+## Jeden namespace/scope
+
+```
+.item {
+  // ...
+}
+
+.page-1 .item {
+  // override
+}
+
+.page-1 span.item {
+  // override
+}
+```
+
+---
+
+## Implicitní závislosti 1/2
+
+```css
+button, input[type="button"], input[type="submit"]  {
+  // ...
+}
+```
+
+<Notes>
+
+- Reuse css pravidel je komlexní záležitost
+- Špatně se udržuje
+- Oba vedou k monolitické architektuře, těžké rozdělení do subsystémů
+
+</Notes>
+
+---
+
+## Implicitní závislosti 2/2
+
+```html
+<button class="inline disabled button">Click</button>
+```
+
+<Notes>
+
+- Reuse css pravidel je komlexní záležitost
+- Špatně se udržuje
+- Oba vedou k monolitické architektuře, těžké rozdělení do subsystémů
+
+</Notes>
+
+---
+
+## Decoupling coupled 1/2
+
+```html
+<style>
+.toolbar { }
+.toolbar-item { float: left; }
+</style>
+
+<div class="toolbar">
+  <ul>
+    <li class="toolbar-item">Item 1</li>
+    <li class="toolbar-item">Item 2</li>
+  </ul>
+</div>
+```
+
+<Notes>
+
+-  HTML je s CSS úzce svázáno - vztah není dostatečně vyditelný.
+-  Například pokud chci použít flex, je třeba aby items byly přímým potomkem
+
+</Notes>
+
+---
+
+## Decoupling coupled 2/2
+
+```html
+<style>
+.toolbar { display: flex; flex-direction: row; }
+</style>
+
+<div class="toolbar">
+  <div class="toolbar-item">Item 1</div>
+  <div class="toolbar-item">Item 2</div>
+</div>
+```
+
+<Notes>
+- pokud chci změnit styly, je často třeba měnit html
+</Notes>
+
+---
+
+## Další
+
+- Deadcode
+- Nedeterministické pořadí CSS pravidel
+
+<Notes>
+
+- a - složitý vztah CSS-HTML  nedovoluje eliminaci dead-code
+- b - Přechod z Page A -> B, vs Page B -> A
+
+</Notes>
+
 ---
 
 <Listed>
 
-## Features
+## CSS-in-JS Features
 
 - Zapouzdření/komponentárnost
 - "Naming things is hard"
 - Jeden jazyk
 
 </Listed>
+
+<Notes>
+
+- Explicitní závislosti
+- Explicitní vztah struktury se vzhledem
+- Sdílení konfigurace/dat
+
+</Notes>
 
 ---
 
@@ -176,6 +337,7 @@ v12.12.0
 
 - [princip](https://github.com/styled-components/styled-components#example)
 - implementace: [emotion](https://emotion.sh/docs/introduction) / [styled-components](https://styled-components.com/)
+- FYI - [tagged template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates)
 
 </Listed>
 
@@ -189,6 +351,14 @@ v12.12.0
 - [Rebass](https://rebassjs.org/)
 
 </Listed>
+
+<Notes>
+
+- styled-system - pro definici "constrait" systémů
+- system-ui - Specifikace nastavení "design-cons"-systemů - jak má vypadat téma
+- Rebass - Rebass definuje konkrétní design systém
+
+</Notes>
 
 ---
 
@@ -242,6 +412,7 @@ v12.12.0
 
 - [Two steps forward, one step back](https://jxnblk.com/blog/two-steps-forward/)
 - [React-Native?](https://github.com/system-ui/theme-ui/issues/170)
+- [What is actually CSS-in-JS](https://medium.com/dailyjs/what-is-actually-css-in-js-f2f529a2757)
 
 </Listed>
 
