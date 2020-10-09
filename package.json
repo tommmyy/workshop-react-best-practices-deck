@@ -30,7 +30,9 @@
 	},
 	"scripts": {
 		"start": "yarn slides src/deck.mdx",
-		"build": "mdx-deck -d ./dist/deck build src/deck.mdx",
+		"build": "yarn build:deck && yarn zip",
+		"build:deck": "mdx-deck -d ./dist/deck build src/deck.mdx",
+		"zip": "zip -X -r react-best-practices.zip public",
 		"slides": "mdx-deck --port=3333",
 		"pdf-slides": "website-pdf http://localhost:3333/print -o"
 	},
